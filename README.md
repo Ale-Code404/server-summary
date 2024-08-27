@@ -2,6 +2,8 @@
 
 This is a simple web app that shows a summary of your server's hardware and software.
 
+![Simple server summary for app list](screenshots/01.png)
+
 ## Installation
 
 1. Clone the repository
