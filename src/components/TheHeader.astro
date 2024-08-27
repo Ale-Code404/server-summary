@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+// Define the URL for the stats page
+const stats = import.meta.env.PUBLIC_STATS_URL || "/stats";
+---
+
+<header class="bg-primary text-primary-foreground py-4 px-6">
+  <div class="container mx-auto flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold">Server Information</h1>
+      <p class="text-sm">Detailed information about your server</p>
+    </div>
+    <a href={stats} class="inline-flex items-center gap-2">
+      <Icon name="carbon:chart-waterfall" />
+      <span>View Statistics</span>
+    </a>
+  </div>
+</header>

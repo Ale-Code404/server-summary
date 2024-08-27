@@ -1,0 +1,35 @@
+---
+type Button = "button" | "a";
+
+interface Props {
+  class?: string;
+  href?: string;
+}
+
+const { href, class: className } = Astro.props;
+
+let Tag = (href ? "a" : "button") as Button;
+---
+
+<Tag
+  class:list={[
+    "cursor-pointer",
+    "inline-flex",
+    "justify-center",
+    "rounded-md",
+    "bg-primary",
+    "px-4",
+    "py-2",
+    "text-sm",
+    "font-medium",
+    "text-primary-foreground",
+    "transition-colors",
+    "duration-100",
+    "hover:bg-primary-foreground",
+    "hover:text-white",
+    className,
+  ]}
+  href={href}
+>
+  <slot />
+</Tag>

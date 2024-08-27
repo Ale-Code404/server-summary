@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  icon?: string;
+}
+
+const { title, description = null } = Astro.props;
+---
+
+<article class="flex flex-col gap-4 rounded-lg border border-primary p-4">
+  <header>
+    <h3 class="font-medium">{title}</h3>
+    {description && <p class="text-muted">{description}</p>}
+  </header>
+
+  <!-- Card content -->
+  <div class="flex flex-col px-4">
+    <slot />
+  </div>
+</article>
